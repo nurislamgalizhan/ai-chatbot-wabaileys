@@ -4,7 +4,7 @@ import { createBrowserRouter, Navigate, Outlet, RouterProvider } from "react-rou
 import { ApiError } from "./api/client";
 import { adminMe, getMe } from "./api/endpoints";
 import Layout from "./components/Layout";
-import { PageLoader, Toaster } from "./components/ui";
+import { onlyWhenSignedIn, PageLoader, Toaster, useFirstLoad } from "./components/ui";
 import AgentPage from "./pages/AgentPage";
 import AnalyticsPage from "./pages/AnalyticsPage";
 import ForgotPage from "./pages/auth/ForgotPage";
@@ -31,16 +31,18 @@ const queryClient = new QueryClient({
 });
 
 function RequireAuth() {
-  const me = useQuery({ queryKey: ["me"], queryFn: getMe, retry: false });
-  if (me.isPending) return <PageLoader />;
+  const me = useQuery({ queryKey: ["me"], queryFn: getMe, retry: false, refetchOnWindowFocus: onlyWhenSignedIn });
+  if (useFirstLoad(me)) return <PageLoader />;
   if (me.error instanceof ApiError && me.error.status === 401) return <Navigate to="/login" replace />;
   return <Outlet />;
 }
 
 /** Signed-in users skip the auth screens. */
 function GuestOnly() {
-  const me = useQuery({ queryKey: ["me"], queryFn: getMe, retry: false });
-  if (me.isPending) return <PageLoader />;
+  const me = useQuery({ queryKey: ["me"], queryFn: getMe, retry: false, refetchOnWindowFocus: onlyWhenSignedIn });
+  // Never swap the login/registration form for a spinner after the first
+  // check — that is what wiped the code step when the tab lost focus.
+  if (useFirstLoad(me)) return <PageLoader />;
   if (me.data) return <Navigate to="/" replace />;
   return <Outlet />;
 }
@@ -49,8 +51,8 @@ function GuestOnly() {
  *  page, and the admin chunk is never even downloaded. */
 function AdminGate() {
   const me = useQuery({ queryKey: ["admin-me"], queryFn: adminMe, retry: false });
-  if (me.isPending) return <PageLoader />;
-  if (me.isError) return <Navigate to="/" replace />;
+  if (useFirstLoad(me)) return <PageLoader />;
+  if (!me.data) return <Navigate to="/" replace />;
   return (
     <Suspense fallback={<PageLoader />}>
       <AdminPage />

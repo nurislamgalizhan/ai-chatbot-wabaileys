@@ -346,6 +346,23 @@ export function Toaster() {
   );
 }
 
+/* ---------- Auth gates ---------- */
+
+/**
+ * True only until the query has settled ONCE. A query that never had data
+ * (the visitor is not signed in yet) goes back to "pending" on every
+ * refetch; gates must not swap the page for a spinner then, or the form the
+ * person is filling in (OTP code, access key…) is unmounted and lost.
+ */
+export function useFirstLoad(q: { isPending: boolean }): boolean {
+  const settled = useRef(false);
+  if (!q.isPending) settled.current = true;
+  return !settled.current;
+}
+
+/** Re-check the session on focus only when there IS a session to re-check. */
+export const onlyWhenSignedIn = (q: { state: { data: unknown } }) => q.state.data !== undefined;
+
 /* ---------- Countdown for "resend code" ---------- */
 
 export function useCountdown(seconds: number, key: unknown) {

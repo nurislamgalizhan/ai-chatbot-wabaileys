@@ -12,7 +12,7 @@ import type { ChatItem } from "../api/endpoints";
 import { ColumnChart, SERIES, ShareBar } from "../components/charts";
 import Icon, { type IconName, Logo } from "../components/Icon";
 import { Bubble } from "../components/Message";
-import { Avatar, Empty, PageLoader, Segmented, Spinner, Toaster, toast } from "../components/ui";
+import { Avatar, Empty, onlyWhenSignedIn, PageLoader, Segmented, Spinner, Toaster, toast, useFirstLoad } from "../components/ui";
 import { dateLong, dayLabel, duration, formatPhone, nf, shortDay, timeOnly, timeShort } from "../lib/format";
 import {
   type CheckFilter,
@@ -648,13 +648,20 @@ function Shell({ me }: { me: CheckMe }) {
 }
 
 function Root() {
-  const me = useQuery({ queryKey: ["check-me"], queryFn: checkMe, retry: false, refetchInterval: 60_000 });
+  const me = useQuery({
+    queryKey: ["check-me"],
+    queryFn: checkMe,
+    retry: false,
+    // While the key form is open nothing is polled: a refetch would reset it.
+    refetchInterval: (q) => (q.state.data ? 60_000 : false),
+    refetchOnWindowFocus: onlyWhenSignedIn,
+  });
+  const first = useFirstLoad(me);
   useEffect(() => {
     document.title = "Alma AI — руководитель";
   }, []);
-  if (me.isPending) return <PageLoader />;
-  if (me.error instanceof ApiError && me.error.status === 401) return <KeyLogin />;
-  if (!me.data) return <PageLoader />;
+  if (first) return <PageLoader />;
+  if (!me.data) return <KeyLogin />;
   return <Shell me={me.data} />;
 }
 
