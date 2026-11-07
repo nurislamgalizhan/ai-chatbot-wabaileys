@@ -1,0 +1,40 @@
+# Deploy behind an EXISTING nginx gateway container (no Caddy, no published
+# ports). The gateway joins the `alma_edge` network and proxies to
+# `alma-app:4100` (cabinet + chief's view) and `alma-landing:80`.
+#   docker compose -f docker-compose.gateway.yml up -d --build
+name: alma-ai
+
+services:
+  app:
+    build: .
+    container_name: alma-app
+    restart: unless-stopped
+    env_file: .env
+    environment:
+      NODE_ENV: production
+      PORT: "4100"
+      APP_ORIGIN: https://app.${DOMAIN:?set DOMAIN in .env}
+      CHECK_ORIGIN: https://check.${DOMAIN}
+    volumes:
+      - alma-data:/app/server/data
+    networks: [alma_edge]
+    mem_limit: 768m
+    logging:
+      driver: json-file
+      options: { max-size: "10m", max-file: "5" }
+
+  landing:
+    image: nginx:alpine
+    container_name: alma-landing
+    restart: unless-stopped
+    volumes:
+      - ./landing:/usr/share/nginx/html:ro
+    networks: [alma_edge]
+    mem_limit: 64m
+
+networks:
+  alma_edge:
+    name: alma_edge
+
+volumes:
+  alma-data:
