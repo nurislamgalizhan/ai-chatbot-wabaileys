@@ -1,0 +1,33 @@
+{
+	email {$ACME_EMAIL}
+}
+
+# Landing page
+{$DOMAIN}, www.{$DOMAIN} {
+	@www host www.{$DOMAIN}
+	redir @www https://{$DOMAIN}{uri} permanent
+
+	root * /srv/landing
+	encode zstd gzip
+	file_server
+	header {
+		Strict-Transport-Security "max-age=31536000; includeSubDomains"
+		X-Content-Type-Options "nosniff"
+		X-Frame-Options "DENY"
+		Referrer-Policy "strict-origin-when-cross-origin"
+		-Server
+	}
+	@static path *.css *.js *.svg *.png *.jpg *.webp *.woff2
+	header @static Cache-Control "public, max-age=86400"
+}
+
+# Application + the chief's read-only view (same app; security headers
+# come from the app itself; cookies are host-only, so the two never mix)
+app.{$DOMAIN}, check.{$DOMAIN} {
+	encode zstd gzip
+	request_body {
+		max_size 1MB
+	}
+	reverse_proxy app:4100
+	header -Server
+}

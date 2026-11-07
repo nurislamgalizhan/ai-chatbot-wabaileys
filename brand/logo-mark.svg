@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none">
+  <defs>
+    <linearGradient id="alma-g" x1="8" y1="6" x2="40" y2="44" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#C6F432"/>
+      <stop offset=".5" stop-color="#22D07F"/>
+      <stop offset="1" stop-color="#0B9A68"/>
+    </linearGradient>
+  </defs>
+  <path d="M25.2 12.6c.4-5 4.3-8.4 9.6-8.4-.3 5.1-4.3 8.5-9.6 8.4z" fill="url(#alma-g)"/>
+  <path d="M24 15.4c-2.8-2-6.9-2.7-10.4-1.3C7.4 16.6 4.6 23.3 6.1 30.6c.7 3.6 2.4 7 4.6 9.4l-2.3 5.1 6.4-2.6c.7.3 1.4.6 2.1.8 2.4.6 4.5-.1 5.9-.9.7-.4 1.6-.4 2.3 0 1.4.8 3.5 1.5 5.9.9 4.9-1.4 8.9-7.3 10.2-13.6 1.5-7.4-1.3-14-7.5-16.5-3.6-1.4-7.7-.7-10.5 1.3z" fill="url(#alma-g)"/>
+  <circle cx="17.3" cy="28.6" r="2.4" fill="#06120D"/>
+  <circle cx="24" cy="28.6" r="2.4" fill="#06120D"/>
+  <circle cx="30.7" cy="28.6" r="2.4" fill="#06120D"/>
+</svg>

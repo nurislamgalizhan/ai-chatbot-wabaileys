@@ -1,0 +1,482 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Alma AI — AI-менеджер для WhatsApp, отвечает клиентам 24/7</title>
+  <meta name="description" content="Alma AI — AI-чатбот для WhatsApp. Отвечает клиентам за секунды 24/7 на русском, казахском и английском, обучается на ваших ценах и услугах, передаёт сложные диалоги менеджеру. Работаем с 2024 года.">
+  <meta name="theme-color" content="#06120D">
+  <meta name="color-scheme" content="dark">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ru_RU">
+  <meta property="og:site_name" content="Alma AI">
+  <meta property="og:title" content="Alma AI — AI-менеджер для WhatsApp">
+  <meta property="og:description" content="Отвечает клиентам в WhatsApp за секунды, 24/7. Русский, қазақша, English. Подключение по QR-коду за минуту.">
+  <meta property="og:image" content="assets/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/svg+xml" href="assets/logo-mark.svg">
+  <link rel="apple-touch-icon" href="assets/logo-mark.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Unbounded:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script>
+    (function () {
+      var d = document.documentElement;
+      d.classList.add("js");
+      var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      if (reduce || /[?&]static\b/.test(location.search)) d.classList.add("static");
+    })();
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Перейти к содержанию</a>
+
+  <!-- ============ HEADER ============ -->
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+      <a class="brand" href="#top" aria-label="Alma AI — на главную">
+        <img src="assets/logo-mark.svg" alt="" width="34" height="34">
+        <span>Alma <b>AI</b></span>
+      </a>
+      <nav class="main-nav" id="main-nav" aria-label="Основная навигация">
+        <a href="#how">Как это работает</a>
+        <a href="#features">Возможности</a>
+        <a href="#start">Как начать</a>
+        <a href="#faq">Вопросы</a>
+        <a class="nav-login-mobile" href="https://app.alma-ai.kz/login" data-app-link="login">Войти</a>
+      </nav>
+      <div class="header-actions">
+        <a class="btn btn-ghost btn-sm" href="https://app.alma-ai.kz/login" data-app-link="login">Войти</a>
+        <a class="btn btn-primary btn-sm" href="https://app.alma-ai.kz/register" data-app-link="register">Приступить</a>
+        <button class="burger" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="main-nav">
+          <span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- ============ HERO ============ -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-bg" aria-hidden="true">
+        <div class="aurora a1"></div>
+        <div class="aurora a2"></div>
+        <div class="aurora a3"></div>
+        <div class="grid-lines"></div>
+      </div>
+
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <p class="badge" data-reveal><span class="pulse-dot"></span>Работаем с 2024 года</p>
+          <h1 id="hero-title" data-reveal style="--d:1">
+            AI-менеджер в&nbsp;WhatsApp <span class="grad-text">отвечает клиентам за&nbsp;секунды&nbsp;— 24/7</span>
+          </h1>
+          <p class="lead" data-reveal style="--d:2">
+            Alma AI изучает ваши цены, услуги и правила, отвечает на вопросы, записывает клиентов
+            и передаёт сложные диалоги менеджеру. Ни одна заявка больше не потеряется — даже ночью.
+          </p>
+          <div class="hero-ctas" data-reveal style="--d:3">
+            <a class="btn btn-primary btn-lg btn-magnetic" href="https://app.alma-ai.kz/register" data-app-link="register">
+              Приступить
+              <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+            <a class="btn btn-ghost btn-lg" href="#how">Как это работает</a>
+          </div>
+          <ul class="hero-points" data-reveal style="--d:4">
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7" /></svg>Без программистов</li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7" /></svg>Русский, қазақша, English</li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7" /></svg>Ваш номер WhatsApp</li>
+          </ul>
+        </div>
+
+        <div class="hero-visual" data-reveal style="--d:2">
+          <div class="phone" role="img" aria-label="Пример диалога: клиент пишет в WhatsApp, Alma AI отвечает за секунды на русском и казахском и передаёт заявку менеджеру">
+            <div class="phone-frame">
+              <div class="phone-notch" aria-hidden="true"></div>
+              <div class="phone-screen">
+                <div class="wa-status" aria-hidden="true"><span>23:47</span><span class="wa-status-icons"><i></i><i></i><i></i></span></div>
+                <div class="wa-header" aria-hidden="true">
+                  <svg class="wa-back" viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></svg>
+                  <span class="wa-avatar">DF</span>
+                  <span class="wa-who"><b>Dala Fitness</b><small><span class="online-dot"></span>онлайн · отвечает Alma AI</small></span>
+                </div>
+                <div class="wa-body" id="phone-chat" aria-hidden="true">
+                  <!-- Static fallback (no JS / reduced motion): full conversation -->
+                  <div class="msg out"><p>Здравствуйте! Сколько стоит абонемент на месяц?</p><time>23:47</time></div>
+                  <div class="msg in"><p>Добрый вечер! 👋 Безлимит на месяц — 18 000 ₸, утренний (до 16:00) — 12 000 ₸. Первое занятие бесплатно. Записать вас на пробное?</p><time>23:47</time><span class="ai-tag">⚡ Alma AI</span></div>
+                  <div class="msg out"><p>Ертең кешкі 19:00-ге жазылуға бола ма?</p><time>23:48</time></div>
+                  <div class="msg in"><p>Әрине! Ертең 19:00-ге сынақ жаттығуына жазып қойдым ✅ Атыңыз кім?</p><time>23:48</time><span class="ai-tag">⚡ Alma AI</span></div>
+                  <div class="msg out"><p>Айдана</p><time>23:48</time></div>
+                  <div class="msg in"><p>Рахмет, Айдана! Менеджер таңертең растау жібереді 🙌</p><time>23:48</time><span class="ai-tag">⚡ Alma AI</span></div>
+                  <div class="sys-chip">Заявка передана менеджеру</div>
+                </div>
+                <div class="wa-input" aria-hidden="true">
+                  <span class="wa-field">Сообщение</span>
+                  <span class="wa-mic"><svg viewBox="0 0 24 24"><path d="M12 3a3 3 0 00-3 3v6a3 3 0 006 0V6a3 3 0 00-3-3zM6 11a6 6 0 0012 0M12 17v4"/></svg></span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="float-card fc-1" aria-hidden="true">
+            <span class="fc-icon lime">⚡</span>
+            <span><b>Ответ за секунды</b><small>даже ночью</small></span>
+          </div>
+          <div class="float-card fc-2" aria-hidden="true">
+            <span class="fc-icon">🌙</span>
+            <span><b>23:47 — бот на связи</b><small>менеджеры отдыхают</small></span>
+          </div>
+          <div class="float-card fc-3" aria-hidden="true">
+            <span class="fc-icon green">✓</span>
+            <span><b>Новая заявка</b><small>Айдана · завтра 19:00</small></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ TRUST / LOGOS ============ -->
+    <section class="trust" id="clients" aria-labelledby="trust-title">
+      <div class="container">
+        <h2 id="trust-title" class="trust-title" data-reveal>Нам уже доверяют <span>Меркурий Медет, Best Volleyball Academy, Invictus Go, MATAI, KBTU и другие</span></h2>
+      </div>
+      <div class="marquee" data-reveal style="--d:1">
+        <div class="marquee-track">
+          <ul class="marquee-group">
+            <li class="logo-item" title="Меркурий Медет"><img src="assets/logos/mercury-medet.svg" alt="Меркурий Медет" class="logo-mono" width="190" height="40"></li>
+            <li class="logo-item" title="Best Volleyball Academy"><img src="assets/logos/bva.png" alt="Best Volleyball Academy" class="logo-color" width="58" height="60"><span class="logo-label">Best Volleyball<br>Academy</span></li>
+            <li class="logo-item" title="Invictus Go"><img src="assets/logos/invictus.svg" alt="Invictus" class="logo-mono" width="150" height="37"><span class="logo-pill">GO</span></li>
+            <li class="logo-item" title="MATAI"><img src="assets/logos/matai-cube.png" alt="" class="logo-color" width="44" height="44"><span class="logo-word">MATAI</span></li>
+            <li class="logo-item" title="KBTU — Kazakh-British Technical University"><img src="assets/logos/kbtu.png" alt="KBTU — Kazakh-British Technical University" class="logo-mono" width="190" height="44"></li>
+          </ul>
+          <ul class="marquee-group" aria-hidden="true">
+            <li class="logo-item"><img src="assets/logos/mercury-medet.svg" alt="" class="logo-mono" width="190" height="40"></li>
+            <li class="logo-item"><img src="assets/logos/bva.png" alt="" class="logo-color" width="58" height="60"><span class="logo-label">Best Volleyball<br>Academy</span></li>
+            <li class="logo-item"><img src="assets/logos/invictus.svg" alt="" class="logo-mono" width="150" height="37"><span class="logo-pill">GO</span></li>
+            <li class="logo-item"><img src="assets/logos/matai-cube.png" alt="" class="logo-color" width="44" height="44"><span class="logo-word">MATAI</span></li>
+            <li class="logo-item"><img src="assets/logos/kbtu.png" alt="" class="logo-mono" width="190" height="44"></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ BEFORE / AFTER ============ -->
+    <section class="section how" id="how" aria-labelledby="how-title">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <p class="eyebrow">Как это работает</p>
+          <h2 id="how-title">Как Alma AI упрощает работу с&nbsp;клиентами</h2>
+          <p class="section-sub">Один и тот же вопрос в 23:14. Посмотрите, чем заканчивается диалог без бота и с ним.</p>
+        </div>
+
+        <div class="compare">
+          <article class="compare-card before" data-reveal style="--d:1">
+            <header class="compare-head">
+              <span class="compare-icon bad" aria-hidden="true">✕</span>
+              <h3>Без Alma AI</h3>
+            </header>
+            <div class="mini-chat" aria-label="Пример диалога без бота">
+              <div class="mc out"><span>Здравствуйте! Есть места на завтра?</span><time>23:14</time></div>
+              <div class="mc-wait"><span class="clock" aria-hidden="true"></span>10 ч 38 мин без ответа</div>
+              <div class="mc in"><span>Доброе утро! Да, есть 🙂</span><time>09:52</time></div>
+              <div class="mc out"><span>Спасибо, уже записалась в другое место</span><time>09:53</time></div>
+              <div class="mc-result bad">Клиент ушёл к конкуренту</div>
+            </div>
+            <ul class="compare-list">
+              <li>Заявки ночью и в выходные теряются</li>
+              <li>Менеджер по сто раз отвечает на одни и те же вопросы</li>
+              <li>Клиент ждёт часами и уходит туда, где ответили быстрее</li>
+              <li>Переписки разбросаны по телефонам сотрудников</li>
+            </ul>
+          </article>
+
+          <div class="compare-vs" aria-hidden="true"><span>VS</span></div>
+
+          <article class="compare-card after" data-reveal style="--d:2">
+            <header class="compare-head">
+              <span class="compare-icon good" aria-hidden="true">✓</span>
+              <h3>С Alma AI</h3>
+            </header>
+            <div class="mini-chat" aria-label="Пример диалога с Alma AI">
+              <div class="mc out"><span>Здравствуйте! Есть места на завтра?</span><time>23:14</time></div>
+              <div class="mc-wait fast"><span class="bolt" aria-hidden="true">⚡</span>ответ через несколько секунд</div>
+              <div class="mc in ai"><span>Добрый вечер! Завтра свободно 11:00 и 15:30. Записать вас?</span><time>23:14</time></div>
+              <div class="mc out"><span>Да, на 15:30 🙌</span><time>23:15</time></div>
+              <div class="mc-result good">Запись готова, менеджер увидит её утром</div>
+            </div>
+            <ul class="compare-list">
+              <li>Мгновенный ответ в любое время — 24/7</li>
+              <li>Типовые вопросы закрывает бот, менеджер подключается, только когда нужно</li>
+              <li>Клиент получает ответ, пока он «горячий»</li>
+              <li>Все диалоги и заявки — в одной панели</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FEATURES ============ -->
+    <section class="section features" id="features" aria-labelledby="features-title">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <p class="eyebrow">Возможности</p>
+          <h2 id="features-title">Всё, что нужно, чтобы клиенты не&nbsp;ждали</h2>
+          <p class="section-sub">Alma AI работает как внимательный сотрудник, который знает всё о вашем бизнесе и никогда не уходит с&nbsp;линии.</p>
+        </div>
+
+        <div class="bento">
+          <article class="feature spot f-wide" data-reveal style="--d:0">
+            <div class="feature-visual clock-visual" aria-hidden="true">
+              <div class="orbit"><span class="sun">☀︎</span><span class="moon">☾</span></div>
+              <div class="clock-face"><b>24/7</b></div>
+            </div>
+            <h3>Отвечает 24/7</h3>
+            <p>Ночью, в выходные и праздники. Без обедов, отпусков и «перезвоню позже» — клиент получает ответ сразу.</p>
+          </article>
+
+          <article class="feature spot" data-reveal style="--d:1">
+            <div class="feature-visual kb" aria-hidden="true">
+              <span class="feature-icon"><svg viewBox="0 0 24 24"><path d="M4 5.5A2.5 2.5 0 016.5 3H20v15H6.5A2.5 2.5 0 004 20.5v-15z"/><path d="M4 20.5A2.5 2.5 0 016.5 18H20v3H6.5A2.5 2.5 0 014 20.5zM8 7h8M8 11h6"/></svg></span>
+              <span class="kb-files"><i>прайс.pdf</i><i>FAQ</i><i>услуги</i></span>
+            </div>
+            <h3>Обучается на ваших данных</h3>
+            <p>Загрузите прайс, услуги, FAQ и правила — бот отвечает только по ним и не выдумывает цены.</p>
+          </article>
+
+          <article class="feature spot" data-reveal style="--d:2">
+            <div class="feature-visual wave" aria-hidden="true">
+              <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+            </div>
+            <h3>Понимает голосовые</h3>
+            <p>Клиент записал голосовое? Alma AI расшифрует его и ответит текстом по существу.</p>
+          </article>
+
+          <article class="feature spot" data-reveal style="--d:1">
+            <div class="feature-visual lang-chips" aria-hidden="true"><span>Русский</span><span>Қазақша</span><span>English</span></div>
+            <h3>Три языка</h3>
+            <p>Отвечает на языке клиента и понимает смешанную речь — как говорят в Казахстане.</p>
+          </article>
+
+          <article class="feature spot f-wide" data-reveal style="--d:2">
+            <div class="feature-visual handoff" aria-hidden="true">
+              <span class="ho-node bot"><img src="assets/logo-mark.svg" alt="" width="26" height="26"></span>
+              <span class="ho-line"><i></i></span>
+              <span class="ho-node human">👩‍💼</span>
+              <span class="ho-note">AI на паузе, пока пишет менеджер</span>
+            </div>
+            <h3>Передаёт диалог менеджеру</h3>
+            <p>Сложный вопрос или горячий клиент — чат помечается «требует внимания». А когда менеджер пишет сам, с телефона или из панели, AI в этом чате автоматически замолкает.</p>
+          </article>
+
+          <article class="feature spot" data-reveal style="--d:3">
+            <div class="feature-visual inbox" aria-hidden="true">
+              <span class="ib-row"><i class="av a"></i><b></b><em>2</em></span>
+              <span class="ib-row"><i class="av b"></i><b></b></span>
+              <span class="ib-row"><i class="av c"></i><b></b><em class="warn">!</em></span>
+            </div>
+            <h3>Все чаты в одной панели</h3>
+            <p>Видите каждый диалог, отвечаете сами, ставите AI на паузу в один клик.</p>
+          </article>
+
+          <article class="feature spot f-wide f-row" data-reveal style="--d:1">
+            <div class="feature-visual bars" aria-hidden="true">
+              <span style="--h:42%"></span><span style="--h:64%"></span><span style="--h:51%"></span><span style="--h:78%"></span><span style="--h:69%"></span><span style="--h:92%"></span><span style="--h:84%"></span>
+            </div>
+            <h3>Аналитика</h3>
+            <p>Сколько написали, сколько закрыл бот, сколько передано людям — по дням.</p>
+          </article>
+
+          <article class="feature spot f-wide f-row" data-reveal style="--d:2">
+            <div class="feature-visual qr" aria-hidden="true">
+              <svg viewBox="0 0 29 29" shape-rendering="crispEdges"><path d="M0 0h7v7H0zM22 0h7v7h-7zM0 22h7v7H0z" fill="currentColor"/><path d="M2 2h3v3H2zM24 2h3v3h-3zM2 24h3v3H2z" fill="#06120D"/><path d="M9 1h2v2H9zM13 0h2v3h-2zM17 2h3v2h-3zM9 5h3v2H9zM14 5h2v3h-2zM10 9h2v2h-2zM1 9h3v2H1zM5 10h2v3H5zM14 10h4v2h-4zM20 9h2v3h-2zM24 9h4v2h-4zM9 13h3v3H9zM16 14h2v2h-2zM22 13h2v3h-2zM26 13h3v2h-3zM1 14h2v3H1zM12 17h3v2h-3zM18 17h3v3h-3zM24 17h2v2h-2zM9 20h2v4H9zM14 21h3v2h-3zM20 22h2v2h-2zM24 21h3v2h-3zM13 25h2v3h-2zM17 25h4v2h-4zM23 25h2v4h-2zM26 26h3v2h-3z" fill="currentColor"/></svg>
+              <span class="qr-scan"></span>
+            </div>
+            <h3>Свой номер по QR за минуту</h3>
+            <p>Отсканируйте QR-код в WhatsApp, как для WhatsApp Web, — и бот уже отвечает с вашего номера.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ STEPS ============ -->
+    <section class="section start" id="start" aria-labelledby="start-title">
+      <div class="container start-inner">
+        <div class="start-aside" data-reveal>
+          <p class="eyebrow">Как начать</p>
+          <h2 id="start-title">Запуск за&nbsp;один вечер</h2>
+          <p class="section-sub">Без интеграторов и долгих созвонов. Всё настраивается в личном кабинете, а мы поможем, если понадобится.</p>
+          <a class="btn btn-primary btn-lg btn-magnetic" href="https://app.alma-ai.kz/register" data-app-link="register">Приступить</a>
+        </div>
+
+        <ol class="steps" id="steps">
+          <li class="steps-line" aria-hidden="true"><span class="steps-progress"></span></li>
+          <li class="step" data-reveal style="--d:0">
+            <span class="step-num">01</span>
+            <div>
+              <h3>Регистрация</h3>
+              <p>Укажите номер телефона — код подтверждения придёт прямо в WhatsApp.</p>
+            </div>
+          </li>
+          <li class="step" data-reveal style="--d:1">
+            <span class="step-num">02</span>
+            <div>
+              <h3>Подключите свой WhatsApp</h3>
+              <p>Отсканируйте QR-код в приложении WhatsApp. Номер остаётся вашим, телефон работает как обычно.</p>
+            </div>
+          </li>
+          <li class="step" data-reveal style="--d:2">
+            <span class="step-num">03</span>
+            <div>
+              <h3>Обучите агента</h3>
+              <p>Загрузите знания о бизнесе — прайс, услуги, правила — и задайте тон общения. Проверьте ответы в тестовом чате.</p>
+            </div>
+          </li>
+          <li class="step" data-reveal style="--d:3">
+            <span class="step-num">04</span>
+            <div>
+              <h3>Бот отвечает клиентам</h3>
+              <p>Alma AI ведёт диалоги, а вы видите все переписки в панели и подключаетесь в любой момент.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============ STATS ============ -->
+    <section class="stats" aria-label="Alma AI в цифрах">
+      <div class="container stats-grid">
+        <div class="stat" data-reveal style="--d:0">
+          <span class="stat-value"><span class="stat-prefix">с</span> <span data-count="2024" data-from="2000">2024</span></span>
+          <span class="stat-label">года помогаем бизнесу отвечать клиентам</span>
+        </div>
+        <div class="stat" data-reveal style="--d:1">
+          <span class="stat-value"><span data-count="24" data-from="0">24</span>/7</span>
+          <span class="stat-label">без выходных, обедов и отпусков</span>
+        </div>
+        <div class="stat" data-reveal style="--d:2">
+          <span class="stat-value"><span data-count="3" data-from="0">3</span> языка</span>
+          <span class="stat-label">русский, қазақша и English</span>
+        </div>
+        <div class="stat" data-reveal style="--d:3">
+          <span class="stat-value stat-word">Секунды</span>
+          <span class="stat-label">а не часы — на ответ клиенту</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FAQ ============ -->
+    <section class="section faq" id="faq" aria-labelledby="faq-title">
+      <div class="container faq-inner">
+        <div class="section-head left" data-reveal>
+          <p class="eyebrow">Вопросы</p>
+          <h2 id="faq-title">Частые вопросы</h2>
+          <p class="section-sub">Не нашли ответ? Напишите нам — ответим лично.</p>
+          <!-- TODO: заменить номер WhatsApp -->
+          <a class="btn btn-ghost faq-contact" href="https://wa.me/77000000000" rel="noopener">
+            <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M4 20l1.3-3.9A8 8 0 1112 20a8 8 0 01-4.1-1.1L4 20z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+            Написать в WhatsApp
+          </a>
+        </div>
+
+        <div class="accordion" data-reveal style="--d:1">
+          <div class="acc-item">
+            <h3><button class="acc-btn" type="button" aria-expanded="false" aria-controls="faq-2" id="faq-2-btn">Бот умеет отвечать на казахском?<span class="acc-icon" aria-hidden="true"></span></button></h3>
+            <div class="acc-panel" id="faq-2" role="region" aria-labelledby="faq-2-btn"><div><p>Да. Alma AI отвечает на языке клиента — на русском, казахском или английском — и понимает смешанную речь. Язык определяется автоматически в каждом диалоге.</p></div></div>
+          </div>
+          <div class="acc-item">
+            <h3><button class="acc-btn" type="button" aria-expanded="false" aria-controls="faq-3" id="faq-3-btn">Что если бот не знает ответа?<span class="acc-icon" aria-hidden="true"></span></button></h3>
+            <div class="acc-panel" id="faq-3" role="region" aria-labelledby="faq-3-btn"><div><p>Он не выдумывает. Бот честно скажет клиенту, что уточнит информацию, и передаст диалог менеджеру — чат получит отметку «требует внимания», и вы сразу его увидите в панели.</p></div></div>
+          </div>
+          <div class="acc-item">
+            <h3><button class="acc-btn" type="button" aria-expanded="false" aria-controls="faq-4" id="faq-4-btn">Можно ли ответить клиенту самому?<span class="acc-icon" aria-hidden="true"></span></button></h3>
+            <div class="acc-panel" id="faq-4" role="region" aria-labelledby="faq-4-btn"><div><p>Конечно — из панели Alma AI или прямо с телефона. Когда менеджер пишет сам, AI в этом чате автоматически встаёт на паузу, чтобы не перебивать. Включить бота обратно можно в один клик.</p></div></div>
+          </div>
+          <div class="acc-item">
+            <h3><button class="acc-btn" type="button" aria-expanded="false" aria-controls="faq-5" id="faq-5-btn">Насколько безопасны мои данные?<span class="acc-icon" aria-hidden="true"></span></button></h3>
+            <div class="acc-panel" id="faq-5" role="region" aria-labelledby="faq-5-btn"><div><p>Вход в кабинет защищён паролем и подтверждением номера через WhatsApp, данные хранятся на защищённом сервере. Для генерации ответов используется API OpenAI — по правилам OpenAI данные, переданные через API, не используются для обучения моделей.</p></div></div>
+          </div>
+          <div class="acc-item">
+            <h3><button class="acc-btn" type="button" aria-expanded="false" aria-controls="faq-6" id="faq-6-btn">Сколько времени занимает подключение?<span class="acc-icon" aria-hidden="true"></span></button></h3>
+            <div class="acc-panel" id="faq-6" role="region" aria-labelledby="faq-6-btn"><div><p>Регистрация и подключение WhatsApp — несколько минут. Наполнение базы знаний — от 15 минут до часа, в зависимости от объёма информации. Если нужна помощь с настройкой — мы рядом.</p></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FINAL CTA ============ -->
+    <section class="final-cta" aria-labelledby="cta-title">
+      <div class="container">
+        <div class="cta-card" data-reveal>
+          <div class="cta-glow" aria-hidden="true"></div>
+          <img class="cta-mark" src="assets/logo-mark.svg" alt="" width="64" height="64">
+          <h2 id="cta-title">Пусть Alma AI отвечает клиентам, пока вы занимаетесь бизнесом</h2>
+          <p>Регистрация за пару минут. Подтверждение — прямо в WhatsApp.</p>
+          <div class="cta-actions">
+            <a class="btn btn-dark btn-lg btn-magnetic" href="https://app.alma-ai.kz/register" data-app-link="register">
+              Приступить
+              <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+            <a class="btn btn-outline-dark btn-lg" href="https://app.alma-ai.kz/login" data-app-link="login">Войти в кабинет</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer" id="contacts">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="#top" aria-label="Alma AI — наверх">
+          <img src="assets/logo-mark.svg" alt="" width="34" height="34">
+          <span>Alma <b>AI</b></span>
+        </a>
+        <p>AI-менеджер для WhatsApp: отвечает клиентам 24/7, обучается на данных вашего бизнеса и передаёт сложные диалоги людям.</p>
+        <p class="since"><span class="pulse-dot"></span>Работаем с 2024 года</p>
+      </div>
+
+      <nav class="footer-col" aria-label="Продукт">
+        <h3>Продукт</h3>
+        <a href="#how">Как это работает</a>
+        <a href="#features">Возможности</a>
+        <a href="#start">Как начать</a>
+        <a href="#faq">Вопросы и ответы</a>
+        <a href="https://app.alma-ai.kz/login" data-app-link="login">Войти в кабинет</a>
+      </nav>
+
+      <nav class="footer-col" aria-label="Компания">
+        <h3>Компания</h3>
+        <a href="#clients">Клиенты</a>
+        <a href="#contacts">Контакты</a>
+        <a href="https://app.alma-ai.kz/register" data-app-link="register">Регистрация</a>
+      </nav>
+
+      <nav class="footer-col" aria-label="Документы">
+        <h3>Документы</h3>
+        <!-- TODO: заменить ссылку на страницу политики конфиденциальности -->
+        <a href="#">Политика конфиденциальности</a>
+        <!-- TODO: заменить ссылку на публичную оферту -->
+        <a href="#">Публичная оферта</a>
+      </nav>
+
+      <div class="footer-col contacts">
+        <h3>Контакты</h3>
+        <!-- TODO: заменить --><a href="https://wa.me/77752322294" rel="noopener">+7 (775) 232-22-94 · WhatsApp</a>
+        <!-- TODO: заменить --><a href="mailto:nurislamgalizhan@gmail.com">nurislamgalizhan@gmail.com</a>
+        <span>Алматы, Казахстан</span>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <!-- TODO: заменить реквизиты -->
+      <p>© <span id="year">2026</span> Alma AI. ТОО «Автоматизация процессов и разработка ПО AlmaAI», БИН 240412358977.</p>
+      <p class="footer-legal">
+        <!-- TODO: заменить --><a href="#">Политика конфиденциальности</a>
+        <!-- TODO: заменить --><a href="#">Публичная оферта</a>
+      </p>
+    </div>
+  </footer>
+
+  <script src="main.js" defer></script>
+</body>
+</html>

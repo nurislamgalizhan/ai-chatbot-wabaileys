@@ -1,0 +1,44 @@
+# Production: one VPS, automatic HTTPS (Let's Encrypt) via Caddy.
+#   https://<DOMAIN>      -> landing/ (static)
+#   https://app.<DOMAIN>  -> Alma AI app (API + SPA)
+#   https://check.<DOMAIN> -> chief's read-only view (same app, own access keys)
+# DNS: A-records for <DOMAIN>, www.<DOMAIN>, app.<DOMAIN> and check.<DOMAIN> -> server IP.
+services:
+  app:
+    build: .
+    restart: unless-stopped
+    env_file: .env
+    environment:
+      NODE_ENV: production
+      PORT: "4100"
+      APP_ORIGIN: https://app.${DOMAIN:?set DOMAIN in .env}
+      CHECK_ORIGIN: https://check.${DOMAIN}
+    volumes:
+      - alma-data:/app/server/data
+    expose:
+      - "4100"
+    logging:
+      driver: json-file
+      options: { max-size: "10m", max-file: "5" }
+
+  caddy:
+    image: caddy:2.10-alpine
+    restart: unless-stopped
+    depends_on: [app]
+    ports:
+      - "80:80"
+      - "443:443"
+      - "443:443/udp"
+    environment:
+      DOMAIN: ${DOMAIN}
+      ACME_EMAIL: ${ACME_EMAIL:-}
+    volumes:
+      - ./deploy/Caddyfile:/etc/caddy/Caddyfile:ro
+      - ./landing:/srv/landing:ro
+      - caddy-data:/data
+      - caddy-config:/config
+
+volumes:
+  alma-data:
+  caddy-data:
+  caddy-config:
